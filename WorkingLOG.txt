@@ -1,0 +1,42 @@
+_________________________________________________________________________________________________
+_________________________________________________________________________________________________
+_________________________________________________________________________________________________
+Log00: 01 May 2018 | 12.00AM - Start the design. 
+Log01: 02 May 2018 | 03.00AM - Complete the static design for front end.
+Log02: 03 May 2018 | 03.15AM - Confirm the front end design. 
+Log03: 04 May 2018 | 03.00AM - Complete Installation the codeigniter & file managing. 
+Log04: 05 May 2018 | 04.00AM - Database Making for front end. 
+Log05: 06 May 2018 | 03.00AM - 
+Log06: 07 May 2018 | 08.15AM - Error handling for front end. 
+_________________________________________________________________________________________________
+
+Log07: 09 May 2018 | 09.00AM - Sharing with JRO- computer office
+Log08: 09 May 2018 | 10.50AM - Registration form for learners registrations.
+Log09: 10 May 2018 | 01.18PM - tb_student_profile ready. design of registration form ready. 
+_________________________________________________________________________________________________
+_________________________________________________________________________________________________
+
+Log10: 13 May 2018 | 02.00PM - Contact page design... and menu installation.. 
+_________________________________________________________________________________________________
+
+Log11: 14 May 2018 | 10.00PM - complete dynamic installation of home page without social link and footer content..
+Log12: 14 May 2018 | 10.00PM - complete dynamic installation of gallery page without social link and footer content...
+Log13: 14 May 2018 | 10.00PM - complete dynamic installation of About S2S page without social link and footer contact and slogan..
+Log14: 14 May 2018 | 10.00PM - complete dynamic registration for regular youths... 
+Log15: 14 May 2018 | 10.00PM - complete dynamic installation of about trainers page.. without social links and footer contents..
+Log16: 14 May 2018 | 10.00PM - complete dynamic installation of contuct us page and message sending options without slogan, social links and footer contents..
+_________________________________________________________________________________________________
+
+Log17: 16 May 2018 | 12.00PM - complete the database table installation of tb_user for login... 
+Log18: 16 May 2018 | 01.30PM - USER LOGIN PROCESSING.... BUT NOT COMPLE. 
+Log19: 17 May 2018 | 12.00PM - LOGIN VALIDATION OK.... WITH DATABASE... 
+Log20: 18 May 2018 | 03.00PM - login process installation complete.... 
+_________________________________________________________________________________________________
+Log21: 20 May 2018 | 02.40PM - LOGIN USER VIEW- Dashbord installation complete..
+Log22: 20 May 2018 | 02.40PM - PROFILE MODULE installation, Update & Profile Picture Update complete without Image Rename..
+Log23: 21 May 2018 | 12.40PM - LOGIN USER TRAINE AMOUNT IN SIDEBAR INSTALLATION COMPLETE... 
+
+_______________________________________________________________________________________________________
+Log24: 30 May 2018 | 11.00PM - REQUEST MODULE- REQUESTED APPLICANTS LIST SHOWING COMPLETE.. WITHOUT BUTTON FUNCTIONALITY AND MODAL FUNCTIONALITY.... 
+______________________________________________________________
+Log25: 04 June 2018| 04.00pm - Activated function for applicant done...
