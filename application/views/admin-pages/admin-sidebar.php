@@ -13,10 +13,10 @@
 				<div class="left-menu-item"><a href="<?php echo base_url('index.php/UserHome/Request'); ?>">Requests (<span style="color:red;">					
 					<?php if(isset($allApplicant)){ echo $allApplicant; } ?>
 				</span>)</a></div>
-				<div class="left-menu-item"><a href="">Youth Clubs(<span style="color:red;">				
+				<div class="left-menu-item"><a href="<?php echo base_url('index.php/UserHome/YouthClub'); ?>">Youth Clubs(<span style="color:red;">				
 					<?php if(isset($allYouths)){ echo $allYouths; } ?>
 				</span>)</a></div>
-				<div class="left-menu-item"><a href="">Computer Labs(<span style="color:red;">				
+				<div class="left-menu-item"><a href="<?php echo base_url('index.php/UserHome/YouthLab'); ?>">Computer Labs(<span style="color:red;">				
 					<?php if(isset($allTrainee)){ echo $allTrainee; } ?>
 				</span>)</a></div>
 				<div class="left-menu-item"><a href="">Trainee List</a></div>

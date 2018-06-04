@@ -61,6 +61,7 @@ class UserHome extends CI_Controller {
 		$data['allApplicant'] = $this->student_model->GetTotalApplicant($data);
 		$data['allYouths'] = $this->student_model->GetTotalClubApplicant($data); 
 		$data['allTrainee'] = $this->student_model->GetTotalLabApplicant($data);
+		//$data['allStudent'] = $this->student_model->GetTotalClubStudent($data); /*fetch all student of club*/
 		/*-----------------------------------------------------------------------------------*/
 		$data['siteinfo'] = $this->siteinfo_model->GetSiteinfoByID($data); /*get site info*/ 
 		/*-----------------------------------------------------------------------------------*/
@@ -78,6 +79,8 @@ class UserHome extends CI_Controller {
 		$data['id'] = $this->session->userdata['profile_id']; 
 		$data['profile_info'] = $this->user_model->profileData($data);
 		$data['allApplicant'] = $this->student_model->GetTotalApplicant($data);
+		$data['allYouths'] = $this->student_model->GetTotalClubApplicant($data); 
+		$data['allTrainee'] = $this->student_model->GetTotalLabApplicant($data);
 		/*-----------------------------------------------------------------------------------*/
 		$data['siteinfo'] = $this->siteinfo_model->GetSiteinfoByID($data); /*get site info*/
 		/*-----------------------------------------------------------------------------------*/
@@ -164,7 +167,9 @@ class UserHome extends CI_Controller {
 		$data['id'] = $this->session->userdata['profile_id']; 
 		$data['profile_info'] = $this->user_model->profileData($data);
 		$data['allApplicant'] = $this->student_model->GetTotalApplicant($data);
-		
+		$data['allYouths'] = $this->student_model->GetTotalClubApplicant($data); 
+		$data['allTrainee'] = $this->student_model->GetTotalLabApplicant($data);
+
 		$data['requests'] = $this->student_model->AllApplicantsRequest($data);
 		/*-----------------------------------------------------------------------------------*/
 		$data['siteinfo'] = $this->siteinfo_model->GetSiteinfoByID($data); /*get site info*/
@@ -180,9 +185,62 @@ class UserHome extends CI_Controller {
 	public function ApprovedInClub($id){
 		
 		$id = $id; 
-		$this->student_model->AcceptApplicantRequest($id);
-
+		$check = $this->student_model->AcceptApplicantRequest($id);
 		redirect('UserHome/Request/');
 	}
 	
+
+	/*all youth club students...*/
+	public function YouthClub(){
+		$data = array(); 
+
+		$data['id'] = $this->session->userdata['profile_id']; 
+		$data['profile_info'] = $this->user_model->profileData($data);
+		$data['allApplicant'] = $this->student_model->GetTotalApplicant($data);
+		$data['allYouths'] = $this->student_model->GetTotalClubApplicant($data); 
+		$data['allTrainee'] = $this->student_model->GetTotalLabApplicant($data);
+
+		$data['students'] = $this->student_model->AllYouthClubStudents($data);
+		/*-----------------------------------------------------------------------------------*/
+		$data['siteinfo'] = $this->siteinfo_model->GetSiteinfoByID($data); /*get site info*/
+		/*-----------------------------------------------------------------------------------*/
+		$data['page_header'] = $this->load->view('included/page_header.php',$data); /*Header Loaded*/
+		$data['page_sidebar'] = $this->load->view('admin-pages/admin-sidebar.php',$data);
+		$data['page_content'] = $this->load->view('admin-pages/YouthClub.php',$data); /*content Loaded*/
+		$data['page-footer'] = $this->load->view('included/page_footer.php',$data); 
+		/*-----------------------------------------------------------------------------------*/
+		$this->load->view('index',$data); /*LOAD TO MASTER PAGE*/
+	}
+
+	public function AddToLab($id,$trade){
+		$data = array(); 
+		$data['id'] = $id; 
+		$data['trade'] = $trade; 
+
+		$this->student_model->AddToLab($data);
+		redirect('UserHome/YouthClub');
+	}
+
+	/*all youth club students...*/
+	public function YouthLab(){
+		$data = array(); 
+
+		$data['id'] = $this->session->userdata['profile_id']; 
+		$data['profile_info'] = $this->user_model->profileData($data);
+		$data['allApplicant'] = $this->student_model->GetTotalApplicant($data);
+		$data['allYouths'] = $this->student_model->GetTotalClubApplicant($data); 
+		$data['allTrainee'] = $this->student_model->GetTotalLabApplicant($data);
+
+		$data['students'] = $this->student_model->AllLabStudents($data);
+		/*-----------------------------------------------------------------------------------*/
+		$data['siteinfo'] = $this->siteinfo_model->GetSiteinfoByID($data); /*get site info*/
+		/*-----------------------------------------------------------------------------------*/
+		$data['page_header'] = $this->load->view('included/page_header.php',$data); /*Header Loaded*/
+		$data['page_sidebar'] = $this->load->view('admin-pages/admin-sidebar.php',$data);
+		$data['page_content'] = $this->load->view('admin-pages/YouthClub.php',$data); /*content Loaded*/
+		$data['page-footer'] = $this->load->view('included/page_footer.php',$data); 
+		/*-----------------------------------------------------------------------------------*/
+		$this->load->view('index',$data); /*LOAD TO MASTER PAGE*/
+	}
+
 }
